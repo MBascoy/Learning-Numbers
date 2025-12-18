@@ -1,0 +1,69 @@
+include<../../global_constants.scad>
+
+button_size=6.5;
+
+button_x=3;
+button_y=-53;
+
+button_volume_x=36;
+button_volume_y=-53;
+
+button_margin=3;
+
+module buttons_levels(){
+    for(i=[0:1:2]){
+        translate([button_x, button_y - (button_size + button_margin) * i, cylinder_radius-button_size])cube(button_size);
+    }
+}
+
+module buttons_volume(){
+    for(i=[0:1:1]){
+        translate([button_volume_x, button_y - (button_size + button_margin) * i, cylinder_radius-button_size])cube(button_size);
+    }
+}
+
+text_depth=1.2;
+text_size=4;
+text_font="DynaPuff:style=SemiBold";
+
+
+module text_menu(){
+    text_x=button_x + 10;
+
+    text_level1_y=button_y + 1;
+    text_level2_y=text_level1_y - button_size - button_margin;
+    text_level3_y=text_level2_y - button_size - button_margin;
+    
+    translate([text_x, text_level1_y, cylinder_radius-text_depth]){
+        linear_extrude(text_depth)
+        text( "Fácil", size=text_size, font=text_font);
+    }
+
+    translate([text_x, text_level2_y, cylinder_radius-text_depth]){
+        linear_extrude(text_depth)
+        text( "Difícil", size=text_size, font=text_font);
+        
+    }
+    
+    translate([text_x, text_level3_y, cylinder_radius-text_depth]){
+        linear_extrude(text_depth)
+        text( "Practicar", size=text_size, font=text_font);
+        
+    }
+}
+
+module text_volume(){
+    text_volume_x=button_volume_x + 8;
+    text_volume_y=button_volume_y + 1;
+    
+    translate([text_volume_x, text_volume_y, cylinder_radius-text_depth]){
+        linear_extrude(text_depth)
+        text( "Vol+", size=text_size, font=text_font);
+    }
+
+    translate([text_volume_x, text_volume_y - button_size - button_margin, cylinder_radius-text_depth]){
+        linear_extrude(text_depth)
+        text( "Vol-", size=text_size, font=text_font);
+        
+    }
+}
