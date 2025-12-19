@@ -1,15 +1,19 @@
 include<../global_constants.scad>
+use<holes/power_switch.scad>
 
 //main body bottom part for walls
 
 module body_bottom(){
     difference(){
         body_bottom_solid();
+        
         translate([wall_size_offset_x,-wall_size_offset_y, 0]){
             scale([1-(wall_size/100), 1-(wall_size/100),1]){
                 body_bottom_solid();
             }
         }
+        
+        power_switch();
     }
 
     module body_bottom_solid(){

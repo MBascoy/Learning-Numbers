@@ -1,21 +1,6 @@
 include<../../global_constants.scad>
 
-button_size=12.5;
-button_x_margin=5;
-button_starting_x=3;
-
-button_x_placement=button_size + button_x_margin;
-button_y_placement=-100;
-button_y_second_row=30;
-
-confirm_button_x=body_size - button_size-2;
-confirm_button_y=-60;
-
-led_size=2.6;
-led_height=10;
-
 module buttons_counting(){
-
         
         //buttons
         for(i=[0:1:7]){
