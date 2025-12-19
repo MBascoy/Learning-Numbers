@@ -2,8 +2,10 @@ include<../global_constants.scad>
 
 outer_size=4;
 inner_size=2;
-
 anchor_height=4;
+
+top_y=-38;
+bottom_y=-105;
 
 left_anchor_x = outer_size + button_starting_x - (outer_size - inner_size) + button_size;
 
@@ -12,9 +14,6 @@ right_anchor_x = body_size - outer_size - button_size;
 top_right_anchor_x = confirm_button_x + inner_size;
 
 top_left_anchor_x = screen_x - outer_size*2;
-
-top_y=-38;
-bottom_y=-105;
 
 module anchor_pcb(){
     

@@ -17,8 +17,8 @@ screen_size=32;
 screen_x=58;
 screen_y=-70;
 
-power_switch_size_x=13;
-power_switch_size_y=9;
+power_switch_size_x=13.4;
+power_switch_size_y=9.2;
 power_switch_z=-power_switch_size_y;
 
 button_size=12.5;
