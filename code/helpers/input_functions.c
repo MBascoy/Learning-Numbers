@@ -1,0 +1,25 @@
+#include <avr/io.h>
+#include "../common/globals.h"
+#include "learning_numbers.h"
+
+uint16_t check_inputs(){
+    uint16_t inputs=0;
+
+    inputs = read_74HC165();
+
+    for(uint8_t i = 0; i<16; i++){
+        uint16_t current_input = inputs & 1<<i;
+
+        if(current_input ==0){
+            continue;
+        }
+
+        if(current_input & (inputs_reset & 1<<i)){
+            inputs_state ^= (1<<i);
+        }
+    }
+
+    inputs_reset = ~inputs;
+
+    return inputs_state;
+}

@@ -1,7 +1,10 @@
 include<../global_constants.scad>
 
-outer_size=4;
-inner_size=2;
+outer_size=4.5;
+inner_size=2.5;
+
+inner_size_margin=0.4;
+
 anchor_height=4;
 
 top_y=-38;
@@ -34,6 +37,6 @@ module base_anchor(x, y){
         translate([x, y, -wall_size_offset_x +cylinder_radius - anchor_height])
     difference(){
         cylinder(anchor_height, outer_size, outer_size);
-        cylinder(inner_size, inner_size, inner_size);
+        cylinder(anchor_height, inner_size, inner_size - inner_size_margin);
     }
 }
