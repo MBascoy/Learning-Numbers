@@ -20,9 +20,7 @@ uint8_t count_active(uint16_t inputs){
 
 int main(void) {
     SPI_init();
-
-    init_globals();
-
+    
     init_timer1();
 
     while(1) {
