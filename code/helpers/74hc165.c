@@ -1,5 +1,5 @@
 #include <avr/io.h>
-#include "constants.h"
+#include "../constants.h"
 
 void latch() {
     // Pulso en LATCH para actualizar salidas

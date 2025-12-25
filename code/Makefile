@@ -12,13 +12,14 @@ AVRDUDE = avrdude
 # Carpeta de salida para el ejecutable
 OUT_DIR = bin
 
-CFLAGS = -mmcu=$(MCU) -DF_CPU=$(F_CPU) -DBAUD=$(BAUD) -Os -Wall -I includes
+CFLAGS = -mmcu=$(MCU) -DF_CPU=$(F_CPU) -DBAUD=$(BAUD) -Os -Wall
 LDFLAGS = -mmcu=$(MCU)
 
 # Archivos fuente y objetos
-HELPERS = helpers/74hc595.c helpers/SPI.c helpers/input_functions.c
-INITS = inits/timer_init.c inits/SPI_init.c
-SRC = learning_numbers.c common/globals.c interrupts/timer_interrupts.c $(INITS) $(HELPERS)
+HELPERS = helpers/74hc165.c helpers/SPI.c helpers/input_functions.c
+INITS = inits/timer_init.c inits/SPI_init.c inits/inputs_init.c
+INTERRUPTS = interrupts/input_interrupts.c interrupts/timer_interrupts.c
+SRC = learning_numbers.c common/globals.c $(INITS) $(HELPERS) $(INTERRUPTS)
 OBJ = $(SRC:.c=.o)
 
 TARGET_NAME = learning_numbers

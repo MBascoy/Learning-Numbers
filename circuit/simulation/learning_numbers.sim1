@@ -4,7 +4,7 @@
 
 <item itemtype="Led" CircId="Led-3" mainComp="false" Show_id="false" Show_Val="false" Pos="-416,4" rotation="0" hflip="1" vflip="1" label="Led-3" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
 
-<item itemtype="MCU" CircId="mega168-4" mainComp="false" Show_id="true" Show_Val="false" Pos="-784,-112" rotation="0" hflip="1" vflip="1" label="mega168-4" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="8 MHz" Program="../../code/74hc_test.c.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" varList="PORTD,SPDR" MainMcu="true" SerialMon="-1" />
+<item itemtype="MCU" CircId="mega168-4" mainComp="false" Show_id="true" Show_Val="false" Pos="-784,-112" rotation="0" hflip="1" vflip="1" label="mega168-4" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="8 MHz" Program="../../code/bin/learning_numbers.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" varList="PORTD,SPDR" MainMcu="true" SerialMon="-1" />
 
 <item itemtype="Push" CircId="Push-6" mainComp="false" Show_id="false" Show_Val="false" Pos="-512,88" rotation="0" hflip="1" vflip="1" label="Push-6" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
 

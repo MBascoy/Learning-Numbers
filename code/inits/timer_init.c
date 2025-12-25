@@ -6,7 +6,7 @@ void init_timer1() {
 
     TIMSK1 |= (1 << OCIE1A); // Habilitar interrupción por OCR1A
 
-    OCR1A = 1;
+    OCR1A = 50;
 
     sei();
 }

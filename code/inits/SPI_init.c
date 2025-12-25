@@ -1,5 +1,5 @@
 #include <avr/io.h>
-#include "constants.h"
+#include "../constants.h"
 
 void SPI_init() {
     // Configura MISO como entrada, SCK, SS y PL como salida
