@@ -11,7 +11,7 @@ int main(void) {
 
     inputs_init();
     
-    init_timer1();
+    init_timers();
 
     while(1) {
     }

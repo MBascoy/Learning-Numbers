@@ -1,5 +1,6 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <util/delay.h>
 
 #include "../common/globals.h"
 #include "../learning_numbers.h"
@@ -8,7 +9,9 @@ ISR(PCINT1_vect) {
 
     if(bit_is_clear(PINC, PC3)){
         game_mode = 1;
-        random_number = TCNT1%5; //show 1
+        delay_mode = 1;
+        random_number = 7;
+        TCNT0 = 0;
     }
 
     if(bit_is_clear(PINC, PC0)){
@@ -16,6 +19,8 @@ ISR(PCINT1_vect) {
 
         if(active_count == random_number){
             PORTD = 1;
+            random_number = 17;
+            delay_mode = 2;
         }
         else{
             PORTD = 2;

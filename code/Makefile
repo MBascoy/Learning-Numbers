@@ -16,7 +16,7 @@ CFLAGS = -mmcu=$(MCU) -DF_CPU=$(F_CPU) -DBAUD=$(BAUD) -Os -Wall
 LDFLAGS = -mmcu=$(MCU)
 
 # Archivos fuente y objetos
-HELPERS = helpers/74hc165.c helpers/SPI.c helpers/input_functions.c
+HELPERS = helpers/74hc165.c helpers/SPI.c helpers/input_functions.c helpers/random.c
 INITS = inits/timer_init.c inits/SPI_init.c inits/inputs_init.c
 INTERRUPTS = interrupts/input_interrupts.c interrupts/timer_interrupts.c
 SRC = learning_numbers.c common/globals.c $(INITS) $(HELPERS) $(INTERRUPTS)
