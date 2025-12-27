@@ -1,14 +1,15 @@
 #include <avr/io.h>
 #include "globals.h"
-#include "digits.h"
 
 uint16_t inputs_reset = 0xFFFF;
 uint16_t inputs_state=0;
 
 uint8_t count_row = 0;
 uint8_t game_mode = 0;
-uint8_t delay_mode = 0;
+uint8_t animation_active = 0;
 uint8_t animation_number = 0;
+
+uint16_t timer0_counter = 0;
 
 volatile uint8_t *numbers[][2] = {
     {digits[10], digits[0]},
@@ -28,5 +29,4 @@ volatile uint8_t *numbers[][2] = {
     {digits[1], digits[4]},
     {digits[1], digits[5]},
     {digits[1], digits[6]},
-    {digits[10], digits[11]},
 };

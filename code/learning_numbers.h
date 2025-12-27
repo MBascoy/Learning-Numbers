@@ -11,3 +11,7 @@ uint16_t read_74HC165();
 void inputs_init();
 
 int get_random(int a, int b);
+
+void set_new_level();
+
+void show_display();

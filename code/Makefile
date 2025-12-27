@@ -19,7 +19,7 @@ LDFLAGS = -mmcu=$(MCU)
 HELPERS = helpers/74hc165.c helpers/SPI.c helpers/input_functions.c helpers/random.c
 INITS = inits/timer_init.c inits/SPI_init.c inits/inputs_init.c
 INTERRUPTS = interrupts/input_interrupts.c interrupts/timer_interrupts.c
-SRC = learning_numbers.c common/globals.c $(INITS) $(HELPERS) $(INTERRUPTS)
+SRC = learning_numbers.c common/globals.c $(INITS) $(HELPERS) $(INTERRUPTS) display/display.c common/digits.c common/icons.c game/game.c
 OBJ = $(SRC:.c=.o)
 
 TARGET_NAME = learning_numbers

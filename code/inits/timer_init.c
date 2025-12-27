@@ -3,11 +3,11 @@
 void init_timers() {
     //TIMER 1
     TCCR1B |= (1 << WGM12); // Modo CTC
-    TCCR1B |= (1 << CS11) | (1 << CS10); // Prescaler 1024
+    TCCR1B |= (1 << CS10);
 
     TIMSK1 |= (1 << OCIE1A); // Habilitar interrupción por OCR1A
 
-    OCR1A = 50;
+    OCR1A = 5000;
 
     //TIMER 0
     TCCR0A |= (1 << WGM01);
