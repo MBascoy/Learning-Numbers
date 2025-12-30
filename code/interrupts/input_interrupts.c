@@ -7,6 +7,13 @@
 
 ISR(PCINT1_vect) {
 
+    if(debounce_switch == 1){
+        return;
+    }
+
+    debounce_switch = 1;
+    debounce_timer0_counter = 0;
+
     if(bit_is_clear(PINC, PC3)){
         game_mode = 1;
 
@@ -38,7 +45,7 @@ ISR(PCINT1_vect) {
         game_mode = 2;
     }
 
-    if(bit_is_clear(PINC, PC0)){
+    if(bit_is_clear(PINC, PC0)){     
         if(game_mode == 1){
             uint8_t active_count = count_active(entradas);
 

@@ -10,6 +10,8 @@ uint8_t animation_active = 0;
 uint8_t animation_number = 0;
 
 uint16_t timer0_counter = 0;
+uint16_t debounce_timer0_counter = 0;
+uint8_t debounce_switch = 0;
 
 volatile uint8_t *numbers[][2] = {
     {digits[10], digits[0]},

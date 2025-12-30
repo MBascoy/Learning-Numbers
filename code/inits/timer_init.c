@@ -13,7 +13,7 @@ void init_timers() {
     TCCR0A |= (1 << WGM01);
     TCCR0B |= (1 << CS02); // Prescaler de 256
     TIMSK0 |= (1 << OCIE0A);
-    OCR0A = 4; // Interrupción cada 1 milisegundo
+    OCR0A = 32; // Interrupción cada 1 milisegundo
 
     sei();
 }

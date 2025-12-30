@@ -6,3 +6,7 @@
 #define PL_PIN   PB2  // Pin para Parallel Load
 #define LATCH_PIN   PB1  // Pin para Parallel Load
 
+#define ANIMATION_DELAY 90 // Miliseconds for animation steps
+#define ANIMATION_DURATION 1000 // How much Animation lasts
+#define DEBOUNCE_DURATION 70 // Miliseconds for button debounce
+#define RESULT_DURATION 1500 // Miliseconds to show result before next level

@@ -19,3 +19,5 @@ volatile uint8_t min_number;
 volatile uint8_t max_number;
 
 uint16_t timer0_counter;
+uint16_t debounce_timer0_counter;
+uint8_t debounce_switch;
