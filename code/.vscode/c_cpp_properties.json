@@ -3,7 +3,8 @@
         {
             "name": "Linux",
             "defines": [
-                "__AVR_ATmega168P__"
+                "__AVR_ATmega168P__",
+                "BAUD=9600"
             ],
             "cStandard": "c17",
             "cppStandard": "gnu++17",

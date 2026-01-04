@@ -1,6 +1,9 @@
 #include <avr/io.h>
+#include <util/delay.h>
+
 #include "../common/globals.h"
 #include "../learning_numbers.h"
+#include "../audio/audio.h"
 
 uint16_t check_inputs(){
     if(debounce_switch == 0){
@@ -18,6 +21,10 @@ uint16_t check_inputs(){
             if(current_input & (inputs_reset & 1<<i)){
                 debounce_switch = 1;
                 inputs_state ^= (1<<i);
+
+                dfplayer_send_command(DFPLAYER_STOP, 0);
+                _delay_ms(40);
+                dfplayer_play_track(2);
             }
         }
 
