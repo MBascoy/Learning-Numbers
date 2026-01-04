@@ -9,9 +9,10 @@ wall_size=4;
 wall_size_offset_x= (body_size*(wall_size/100))/2;
 wall_size_offset_y= ((body_size+cylinder_radius)*(wall_size/100))/2;
 
-speaker_size=28;
+speaker_size=28.2;
+speaker_size_y=31.2;
 speaker_x=5;
-speaker_y=-40;
+speaker_y=-43;
 
 screen_size=32;
 screen_x=58;

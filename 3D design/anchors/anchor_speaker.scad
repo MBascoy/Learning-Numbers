@@ -1,32 +1,33 @@
 include<../global_constants.scad>
 
-//anchors for speaker
+outer_size=3.5;
+inner_size=1.5;
+
+anchor_height=3.5;
+
+anchor_margin=4;
+
+inner_size_margin=0.4;
+
+top_y = speaker_y + (speaker_size/2);
+
+left_anchor_x = speaker_x - anchor_margin;
+right_anchor_x = speaker_x + speaker_size + anchor_margin;
+
+
 
 module anchor_speaker(){
-    speaker_anchor_size_x=speaker_size;
-    speaker_anchor_size_y=speaker_size;
-    speaker_anchor_height=7;
+    //left anchor
+    base_anchor(left_anchor_x, top_y);
     
-    speaker_anchor_hole_height=5;
-    speaker_anchor_hole_radius=1.4;
+    //right anchor
+    base_anchor(right_anchor_x, top_y);
+}
 
-    speaker_circle_size=13;
-    anchor_adjust=2.9;
-    anchor_margin=1.5;
-
+module base_anchor(x, y){
+        translate([x, y, -wall_size_offset_x +cylinder_radius - anchor_height])
     difference(){
-        translate([speaker_x - anchor_margin, speaker_y - anchor_margin,-wall_size_offset_x + cylinder_radius-speaker_anchor_height])cube([speaker_anchor_size_x + anchor_margin*2, speaker_anchor_size_y + anchor_margin*2, speaker_anchor_height]);
-            
-        translate([speaker_x + anchor_adjust,speaker_y + anchor_adjust, -wall_size_offset_x + cylinder_radius-speaker_anchor_height + speaker_anchor_height -speaker_anchor_hole_height])cylinder(speaker_anchor_hole_height,speaker_anchor_hole_radius,speaker_anchor_hole_radius);
-            
-        translate([speaker_x + speaker_size - anchor_adjust, speaker_y + anchor_adjust,-wall_size_offset_x + cylinder_radius - speaker_anchor_hole_height])cylinder(speaker_anchor_hole_height,speaker_anchor_hole_radius,speaker_anchor_hole_radius);
-        
-
-        translate([speaker_x + anchor_adjust, speaker_y + speaker_size - anchor_adjust,-wall_size_offset_x + cylinder_radius - speaker_anchor_hole_height])cylinder(speaker_anchor_hole_height,speaker_anchor_hole_radius,speaker_anchor_hole_radius);
-        
-
-        translate([speaker_x + speaker_size - anchor_adjust, speaker_y + speaker_size - anchor_adjust,-wall_size_offset_x + cylinder_radius - speaker_anchor_hole_height])cylinder(speaker_anchor_hole_height,speaker_anchor_hole_radius,speaker_anchor_hole_radius);
-        
-         translate([speaker_x + (speaker_anchor_size_x /2), speaker_y +speaker_anchor_size_y /2,0])cylinder(cylinder_radius,speaker_circle_size,speaker_circle_size);
+        cylinder(anchor_height, outer_size, outer_size);
+        cylinder(anchor_height, inner_size, inner_size - inner_size_margin);
     }
 }
