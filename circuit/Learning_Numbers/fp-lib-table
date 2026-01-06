@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "SOP16")(type "KiCad")(uri "${KIPRJMOD}/SOP16.pretty")(options "")(descr ""))
+  (lib (name "Audio_player")(type "KiCad")(uri "${KIPRJMOD}/Audio_player.pretty")(options "")(descr ""))
+  (lib (name "Custom_led")(type "KiCad")(uri "${KIPRJMOD}/Custom_led.pretty")(options "")(descr ""))
+)
