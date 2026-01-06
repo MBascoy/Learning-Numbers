@@ -14,9 +14,9 @@ speaker_size_y=31.2;
 speaker_x=5;
 speaker_y=-43;
 
-screen_size=32;
+screen_size=32.2;
 screen_x=58;
-screen_y=-70;
+screen_y=-75;
 
 power_switch_size_x=13.4;
 power_switch_size_y=9.2;

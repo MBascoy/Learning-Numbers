@@ -9,7 +9,7 @@ anchor_margin=4;
 
 inner_size_margin=0.4;
 
-top_y = speaker_y + (speaker_size/2);
+top_y = speaker_y + (speaker_size_y/2);
 
 left_anchor_x = speaker_x - anchor_margin;
 right_anchor_x = speaker_x + speaker_size + anchor_margin;

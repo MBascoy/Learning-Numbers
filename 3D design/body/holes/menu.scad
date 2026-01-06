@@ -1,12 +1,11 @@
 include<../../global_constants.scad>
 
-button_size=6.5;
+button_size=8.2;
 
 button_x=3;
-button_y=-53;
+button_y=-54;
 
 button_volume_x=36;
-button_volume_y=-53;
 
 button_margin=3;
 
@@ -53,8 +52,8 @@ module text_menu(){
 }
 
 module text_volume(){
-    text_volume_x=button_volume_x + 8;
-    text_volume_y=button_volume_y + 1;
+    text_volume_x=button_volume_x + 9;
+    text_volume_y=button_y + 1;
     
     translate([text_volume_x, text_volume_y, cylinder_radius-text_depth]){
         linear_extrude(text_depth)
