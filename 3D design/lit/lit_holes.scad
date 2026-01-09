@@ -2,7 +2,7 @@ include<../global_constants.scad>;
 
 
 module lit_battery_hole(){
-    translate([40,-80,0]) cube([52,37,lit_height]);
+    translate([lit_battery_x, lit_battery_y, 0]) cube([lit_battery_x_size, lit_battery_y_size, lit_height]);
 }
 module lit_holes(){
     //top left anchor

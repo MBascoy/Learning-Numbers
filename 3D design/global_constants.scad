@@ -27,10 +27,20 @@ body_left_anchor_x = -cylinder_radius + anchor_outer_size + anchor_outer_size - 
 body_right_anchor_x = body_size + cylinder_radius - (anchor_outer_size + anchor_outer_size - anchor_inner_size);
 
 // Lit
-screw_size = 1.6;
-screw_top_height = 2;
+screw_size = 1.65;
+screw_top_height = 1.5;
 
 lit_height = 3;
+
+lit_battery_x = 40;
+lit_battery_y = -140;
+
+lit_battery_x_size = 52;
+lit_battery_y_size = 37;
+
+battery_wall = lit_height;
+
+battery_height = 15;
 
 // Speaker
 speaker_size=28.2;
