@@ -32,7 +32,7 @@ screw_top_height = 1.5;
 
 lit_height = 3;
 
-lit_battery_x = 40;
+lit_battery_x = 20;
 lit_battery_y = -140;
 
 lit_battery_x_size = 52;
