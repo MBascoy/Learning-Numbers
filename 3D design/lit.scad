@@ -3,6 +3,8 @@ include<global_constants.scad>;
 use<body/body_bottom.scad>;
 use<lit/lit_holes.scad>;
 use<lit/lit_battery_box.scad>;
+use<lit/battery_anchors.scad>;
+
 
 difference(){
     hull() linear_extrude(height = lit_height) projection() body_bottom();
@@ -13,3 +15,5 @@ difference(){
 }
 
 lit_battery_box();
+
+anchor_battery();
