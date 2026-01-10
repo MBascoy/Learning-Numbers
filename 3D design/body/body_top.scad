@@ -2,6 +2,7 @@ include<../global_constants.scad>;
 
 use<holes/buttons_counting.scad>;
 use<holes/menu.scad>;
+use<body_text.scad>;
 use<holes/speaker.scad>;
 use<holes/screen.scad>;
 
@@ -9,6 +10,8 @@ use<holes/screen.scad>;
 module body_top(){
     difference(){
         body_top_walls();
+
+        body_text();
 
         //holes for components
         buttons_levels();
