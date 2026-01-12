@@ -13919,7 +13919,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_DIP_x01"
+		(property "Value" "Power Switch"
 			(at 57.15 219.71 0)
 			(effects
 				(font
