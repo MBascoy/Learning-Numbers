@@ -10,3 +10,10 @@
 #define ANIMATION_DURATION 1000 // How much Animation lasts
 #define DEBOUNCE_DURATION 70 // Miliseconds for button debounce
 #define RESULT_DURATION 1500 // Miliseconds to show result before next level
+
+#define START_AUDIO 17 // Track to play when starting a game
+#define EASY_MODE_AUDIO 18
+#define HARD_MODE_AUDIO 19
+#define PRACTICE_MODE_AUDIO 20
+#define SUCCESS_AUDIO 21 // Track to play on success
+#define FAILURE_AUDIO 22 // Track to play on failure

@@ -21,7 +21,7 @@ uint16_t read_74HC165() {
     // Esperar a que termine la transferencia
     while(!(SPSR & (1 << SPIF)));
 
-    data = SPDR;
+    data = (uint16_t)SPDR << 8;
 
     // 2. Iniciar transmisión SPI (enviamos dummy data para recibir)
     SPDR = 0x00;
@@ -30,7 +30,7 @@ uint16_t read_74HC165() {
     while(!(SPSR & (1 << SPIF)));
     
 
-    data = data | (uint16_t)SPDR << 8;
+    data |= SPDR;
 
     return data;
 }

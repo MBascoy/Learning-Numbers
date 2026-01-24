@@ -2,6 +2,7 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
+#include "../constants.h"
 #include "../common/globals.h"
 #include "../learning_numbers.h"
 
@@ -14,7 +15,7 @@ ISR(PCINT1_vect) {
     debounce_switch = 1;
     debounce_timer0_counter = 0;
 
-    if(bit_is_clear(PINC, PC3)){
+    if(bit_is_clear(PINC, PC1)){
         game_mode = 1;
 
         min_number = 1;
@@ -25,6 +26,8 @@ ISR(PCINT1_vect) {
         set_new_level();
         TCNT0 = 0;
         timer0_counter = 0;
+
+        dfplayer_play_track(EASY_MODE_AUDIO);
     }
 
     if(bit_is_clear(PINC, PC2)){
@@ -38,17 +41,21 @@ ISR(PCINT1_vect) {
         set_new_level();
         TCNT0 = 0;
         timer0_counter = 0;
+
+        dfplayer_play_track(HARD_MODE_AUDIO);
     }
 
-    if(bit_is_clear(PINC, PC1)){
+    if(bit_is_clear(PINC, PC3)){
         inputs_state = 0;
         game_mode = 2;
+
+        dfplayer_play_track(PRACTICE_MODE_AUDIO);
     }
 
     if(bit_is_clear(PINC, PC0)){     
-        if(game_mode == 1){
-            uint8_t active_count = count_active(entradas);
+        uint8_t active_count = count_active(entradas);
 
+        if(game_mode == 1){
             result = (active_count == random_number) ? 1 : 2;
 
             if (result == 1){
@@ -57,6 +64,9 @@ ISR(PCINT1_vect) {
             }
 
             animation_active = 2;
+        }
+        else if(game_mode == 2){
+            dfplayer_play_track(active_count);
         }
     }
 }

@@ -13,18 +13,10 @@ int main(void) {
 
     uart_init();
 
-    SPI_init();
-
-    inputs_init();
-    
-    init_timers();
-
-
     // 2. Enviar comandos de inicialización y configuración
 
     // Reiniciar/Inicializar el módulo
-    dfplayer_send_command(DFPLAYER_INIT, 0);
-    _delay_ms(1000); // Esperar que el reset termine
+    _delay_ms(800); // Esperar que el reset termine
 
     // Poner volumen a 20 (de 0 a 30)
     dfplayer_set_volume(15);
@@ -33,6 +25,11 @@ int main(void) {
     // 3. Reproducir el archivo 0001.mp3 de la carpeta /mp3/
     dfplayer_play_track(1);
 
+    SPI_init();
+
+    inputs_init();
+    
+    init_timers();
     while(1) {
     }
 }
