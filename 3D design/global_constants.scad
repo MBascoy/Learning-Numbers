@@ -33,14 +33,14 @@ screw_top_height = 1.5;
 lit_height = 3;
 
 lit_battery_x = 20;
-lit_battery_y = -140;
+lit_battery_y = -120;
 
-lit_battery_x_size = 52;
-lit_battery_y_size = 37;
+lit_battery_x_size = 72;
+lit_battery_y_size = 39;
 
 battery_wall = lit_height;
 
-battery_height = 15;
+battery_height = 14;
 
 // Speaker
 speaker_size=28.2;
@@ -54,9 +54,9 @@ screen_x=58;
 screen_y=-75;
 
 // Power switch
-power_switch_size_x=13.4;
-power_switch_size_y=9.2;
-power_switch_z=-power_switch_size_y;
+power_switch_size_x=8.7;
+power_switch_size_y=14.5;
+power_switch_z=-power_switch_size_y/1.5;
 
 // Buttons
 button_size=12.5;
@@ -73,3 +73,6 @@ confirm_button_y=-60;
 // Leds
 led_size=2.6;
 led_height=10;
+
+// Text
+text_depth=0.6;

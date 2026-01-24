@@ -5,6 +5,7 @@ use<holes/menu.scad>;
 use<body_text.scad>;
 use<holes/speaker.scad>;
 use<holes/screen.scad>;
+use<holes/power_switch.scad>
 
 //top part
 module body_top(){
@@ -21,6 +22,7 @@ module body_top(){
         buttons_counting();
         speaker();
         screen();
+        power_switch();
 }
     
     

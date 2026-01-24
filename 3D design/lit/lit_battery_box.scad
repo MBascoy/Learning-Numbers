@@ -2,9 +2,11 @@ include<../global_constants.scad>;
 
 cables_hole = 7;
 
-battery_screws_spacing = 25;
+battery_screws_spacing = 22.5;
 
 battery_screws_pos = (lit_battery_y_size - battery_screws_spacing) / 2;
+
+battery_roof_height = battery_wall-1;
 
 module lit_battery_box(){
     // Left wall
@@ -21,7 +23,7 @@ module lit_battery_box(){
     
     // Roof
     difference(){
-        translate([lit_battery_x - battery_wall, lit_battery_y - battery_wall, lit_height + battery_height]) cube([lit_battery_x_size+ (battery_wall*2), lit_battery_y_size + (battery_wall*2), battery_wall]);
+        translate([lit_battery_x - battery_wall, lit_battery_y - battery_wall, lit_height + battery_height]) cube([lit_battery_x_size+ (battery_wall*2), lit_battery_y_size + (battery_wall*2), battery_roof_height]);
         
         translate([lit_battery_x + (lit_battery_x_size/2), lit_battery_y + battery_screws_pos, lit_height + battery_height]) cylinder(battery_wall, screw_size, screw_size);
         

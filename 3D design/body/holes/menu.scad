@@ -21,7 +21,6 @@ module buttons_volume(){
     }
 }
 
-text_depth=1.2;
 text_size=4;
 text_font="DynaPuff:style=SemiBold";
 
@@ -35,18 +34,18 @@ module text_menu(){
     
     translate([text_x, text_level1_y, cylinder_radius-text_depth]){
         linear_extrude(text_depth)
-        text( "Fácil", size=text_size, font=text_font);
+        text( "FÁCIL", size=text_size, font=text_font);
     }
 
     translate([text_x, text_level2_y, cylinder_radius-text_depth]){
         linear_extrude(text_depth)
-        text( "Difícil", size=text_size, font=text_font);
+        text( "DIFÍCIL", size=text_size, font=text_font);
         
     }
     
     translate([text_x, text_level3_y, cylinder_radius-text_depth]){
         linear_extrude(text_depth)
-        text( "Practicar", size=text_size, font=text_font);
+        text( "PRACTICAR", size=text_size, font=text_font);
         
     }
 }
