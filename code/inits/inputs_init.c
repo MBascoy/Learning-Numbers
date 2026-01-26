@@ -2,14 +2,14 @@
 
 void inputs_init(){
     //set PC0, PC1, PC2, PC3 as inputs
-    DDRC &= ~((1 << PC0) | (1 << PC1) | (1 << PC2) | (1 << PC3));
+    DDRC &= ~((1 << PC0) | (1 << PC1) | (1 << PC2) | (1 << PC3)) | (1 << PC4) | (1 << PC5);
 
     // TEMPORAL !!!!!!!!!!!!
     DDRD = 0b00000011;
 
     //pull-up resistors
-    PORTC |= (1 << PC0) | (1 << PC1) | (1 << PC2) | (1 << PC3);
+    PORTC |= (1 << PC0) | (1 << PC1) | (1 << PC2) | (1 << PC3) | (1 << PC4) | (1 << PC5);
 
     PCICR |= (1 << PCIE1);
-    PCMSK1 |= (1 << PC0) | (1 << PC1) | (1 << PC2) | (1 << PC3);
+    PCMSK1 |= (1 << PC0) | (1 << PC1) | (1 << PC2) | (1 << PC3) | (1 << PC4) | (1 << PC5);
 }

@@ -25,7 +25,6 @@ uint16_t check_inputs(){
         }
 
         inputs_reset = ~inputs;
-
     }
     return inputs_state;
 }

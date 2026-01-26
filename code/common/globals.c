@@ -1,5 +1,6 @@
 #include <avr/io.h>
 #include "globals.h"
+#include "../constants.h"
 
 uint16_t inputs_reset = 0xFFFF;
 uint16_t inputs_state=0;
@@ -12,6 +13,8 @@ uint8_t animation_number = 0;
 uint16_t timer0_counter = 0;
 uint16_t debounce_timer0_counter = 0;
 uint8_t debounce_switch = 0;
+
+uint8_t global_volume = DEFAULT_VOLUME;
 
 volatile uint8_t *numbers[][2] = {
     {digits[10], digits[0]},

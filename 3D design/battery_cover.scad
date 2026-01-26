@@ -16,5 +16,5 @@ difference(){
 module base_hole(x){
     translate([x, lit_battery_y_size / 2, 0]) cylinder(lit_height, screw_size, screw_size);
     
-    translate([x, lit_battery_y_size / 2, screw_top_height]) cylinder(lit_height, screw_size, screw_size*2);
+    translate([x, lit_battery_y_size / 2, lit_height-screw_top_height]) cylinder(screw_top_height, screw_size, screw_size*1.8);
 }

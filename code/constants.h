@@ -11,9 +11,13 @@
 #define DEBOUNCE_DURATION 70 // Miliseconds for button debounce
 #define RESULT_DURATION 1500 // Miliseconds to show result before next level
 
-#define START_AUDIO 17 // Track to play when starting a game
-#define EASY_MODE_AUDIO 18
-#define HARD_MODE_AUDIO 19
-#define PRACTICE_MODE_AUDIO 20
-#define SUCCESS_AUDIO 21 // Track to play on success
-#define FAILURE_AUDIO 22 // Track to play on failure
+#define START_AUDIO 18 // Track to play when starting a game
+#define EASY_MODE_AUDIO 19
+#define HARD_MODE_AUDIO 20
+#define PRACTICE_MODE_AUDIO 21
+#define SUCCESS_AUDIO 22 // Track to play on success
+#define FAILURE_AUDIO 23 // Track to play on failure
+#define VOLUME_UP_AUDIO 24 // Track to play on failure
+#define VOLUME_DOWN_AUDIO 25 // Track to play on failure
+
+#define DEFAULT_VOLUME 20 // Default volume level (0-30)

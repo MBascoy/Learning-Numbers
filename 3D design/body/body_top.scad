@@ -23,8 +23,7 @@ module body_top(){
         speaker();
         screen();
         power_switch();
-}
-    
+    }
     
     module body_top_walls(){
         difference(){

@@ -29,14 +29,15 @@ body_right_anchor_x = body_size + cylinder_radius - (anchor_outer_size + anchor_
 // Lit
 screw_size = 1.65;
 screw_top_height = 1.5;
+screw_battery_size = 1.35;
 
 lit_height = 3;
 
-lit_battery_x = 20;
+lit_battery_x = 40;
 lit_battery_y = -120;
 
 lit_battery_x_size = 72;
-lit_battery_y_size = 39;
+lit_battery_y_size = 52;
 
 battery_wall = lit_height;
 
@@ -55,7 +56,7 @@ screen_y=-75;
 
 // Power switch
 power_switch_size_x=8.7;
-power_switch_size_y=14.5;
+power_switch_size_y=14.2;
 power_switch_z=-power_switch_size_y/1.5;
 
 // Buttons

@@ -16,6 +16,4 @@ void set_new_level(){
     }
 
     random_number = new_number;
-
-    dfplayer_play_track(random_number);
 }

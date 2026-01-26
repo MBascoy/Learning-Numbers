@@ -1,6 +1,7 @@
 include<../../global_constants.scad>
 
 button_size=8.2;
+size_adjust=0.3;
 
 button_x=3;
 button_y=-54;
@@ -11,13 +12,13 @@ button_margin=3;
 
 module buttons_levels(){
     for(i=[0:1:2]){
-        translate([button_x, button_y - (button_size + button_margin) * i, cylinder_radius-button_size])cube(button_size);
+        translate([button_x - (size_adjust/2), button_y - (size_adjust/2) - (button_size + button_margin) * i, cylinder_radius-button_size])cube(button_size + size_adjust);
     }
 }
 
 module buttons_volume(){
     for(i=[0:1:1]){
-        translate([button_volume_x, button_y - (button_size + button_margin) * i, cylinder_radius-button_size])cube(button_size);
+        translate([button_volume_x - (size_adjust/2), button_y - (size_adjust/2) - (button_size + button_margin) * i, cylinder_radius-button_size])cube(button_size + size_adjust);
     }
 }
 

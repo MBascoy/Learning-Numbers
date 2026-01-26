@@ -15,8 +15,8 @@ void show_display(){
 
     if(game_mode == 0){
         SPI_send(~(1 << count_row));
-        SPI_send(icons[2][count_row]);
-        SPI_send(icons[2][count_row]);
+        SPI_send(icons[4][count_row]);
+        SPI_send(icons[4][count_row]);
 
         SPI_send((uint8_t)(entradas>>8));
         SPI_send((uint8_t)entradas);
@@ -65,11 +65,11 @@ void show_display(){
 
         if(result == 1){
             SPI_send(icons[0][count_row]);
-            SPI_send(digits[10][count_row]);
+            SPI_send(icons[1][count_row]);
         }
         else if (result == 2){
-            SPI_send(icons[1][count_row]);
-            SPI_send(digits[10][count_row]);
+            SPI_send(icons[2][count_row]);
+            SPI_send(icons[3][count_row]);
         }
 
         SPI_send((uint8_t)(entradas>>8));

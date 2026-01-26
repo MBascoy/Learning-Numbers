@@ -16,14 +16,14 @@ int main(void) {
     // 2. Enviar comandos de inicialización y configuración
 
     // Reiniciar/Inicializar el módulo
-    _delay_ms(800); // Esperar que el reset termine
+    _delay_ms(1000); // Esperar que el reset termine
 
     // Poner volumen a 20 (de 0 a 30)
-    dfplayer_set_volume(15);
+    dfplayer_set_volume(DEFAULT_VOLUME);
     _delay_ms(50);
 
     // 3. Reproducir el archivo 0001.mp3 de la carpeta /mp3/
-    dfplayer_play_track(1);
+    dfplayer_play_track(START_AUDIO);
 
     SPI_init();
 

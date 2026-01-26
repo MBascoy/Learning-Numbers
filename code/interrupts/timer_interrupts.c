@@ -4,6 +4,7 @@
 #include "../learning_numbers.h"
 #include "../common/globals.h"
 #include "../constants.h"
+#include "../audio/audio.h"
 
 ISR(TIMER1_COMPA_vect) {
     show_display();
@@ -33,6 +34,7 @@ ISR(TIMER0_COMPA_vect) {
     if(animation_active == 1 && timer0_counter >= ANIMATION_DURATION){
         timer0_counter = 0;
         animation_active = 0;
+        dfplayer_play_track(random_number+1); // +1 because tracks start at 1
     }
 
     if(animation_active == 2 && timer0_counter >= RESULT_DURATION){
