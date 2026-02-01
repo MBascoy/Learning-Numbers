@@ -50,6 +50,8 @@ ISR(PCINT1_vect) {
         inputs_state = 0;
         game_mode = 2;
 
+        inputs_state = 1;
+        
         dfplayer_play_track(PRACTICE_MODE_AUDIO);
     }
 
