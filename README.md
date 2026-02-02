@@ -50,12 +50,15 @@ The components list is the following:
 - 1x Speaker 3W 4Ohm PH2.0 terminal
 
 For the **speaker** you need this specific model:
+
 ![Speaker](/images/speaker.png)
 
 For the **power switch** you need this specific model:
+
 ![Power switch](/images/power%20switch.png)
 
 You need to add a JST connector (PH 2.0) to the power switch and the battery holder, this is an image of the power switch with the PH 2.0 connector:
+
 ![Power switch with connector](/images/power%20switch%20with%20connector.png)
 
 ### Make the 3D design
@@ -74,10 +77,12 @@ Inside **circuit/Learning_Numbers** folder you can find **Gerber.zip** file whic
 When you have the PCB you need to solder the components,
 
 Images of the PCB with no components:
+
 ![PCB front no components](/images/PCB%20front%20no%20components.png)
 ![PCB back no components](/images/PCB%20back%20no%20components.png)
 
 Image of the final result with all the components:
+
 ![PCB front with components](/images/PCB%20front.png)
 ![PCB back with components](/images/PCB%20back.png)
 
