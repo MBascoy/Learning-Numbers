@@ -1,5 +1,7 @@
 # Learning Numbers
-This is a little handheld game for kids (around 3-5 years old) to learn numbers by counting each one.
+This is a little educational game for kids (around 3-5 years old) to learn numbers and counting.
+
+![3d design](/images/3d%20design.png)
 
 PENDING IMAGES
 
@@ -67,14 +69,16 @@ Inside **3D design** folder you can find the 3 .stl files ready to print.
 If you want to change the text (currently are on spanish), you can do it inside **global_constants.scad** file, after that you have to re-render **learning_numbers.scad** file with **openSCAD** and export the .stl file.
 
 Once you have the 3D design printed you have to put the **screw inserts**:
-- 4 M3 inserts for the lit
-- 4 M3 inserts for the PCB
-- 2 M2 inserts for the speaker
+- 4x M3 inserts for the lit
+- 4x M3 inserts for the PCB
+- 2x M2 inserts for the speaker
+
+PENDING IMAGE
 
 ### Make the PCB
 Inside **circuit/Learning_Numbers** folder you can find **Gerber.zip** file which has the PCB ready to be created using a your favorite provider. I've use [jlcpcb.com](https://jlcpcb.com).
 
-When you have the PCB you need to solder the components,
+When you have the PCB you need to solder the components.
 
 Images of the PCB with no components:
 

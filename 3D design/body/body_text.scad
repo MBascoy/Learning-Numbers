@@ -12,10 +12,10 @@ module body_text(){
     text_x=40;
     text_y=-28;
     
-    base_big_text(text_x, text_y, "NÚMEROS");
-    base_big_text(text_x, text_y - text_big_size - text_margin, "CON PADRINO");
+    base_big_text(text_x, text_y, title_text_1);
+    base_big_text(text_x, text_y - text_big_size - text_margin, title_text_2);
     
-    base_small_text(confirm_button_x + confirm_margin_x, confirm_button_y - confirm_margin_y, "OK");
+    base_small_text(confirm_button_x + confirm_margin_x, confirm_button_y - confirm_margin_y, ok_text);
 }
 
 module base_big_text(x, y, message){

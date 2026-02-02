@@ -1,5 +1,17 @@
 $fn=50;
 
+//Game texts
+title_text_1="NÚMEROS";
+title_text_2="CON PADRINO";
+ok_text="OK";
+easy_text="FACIL";
+hard_text="DIFÍCIL";
+practice_text="PRACTICAR";
+
+volume_plus_text="Vol+";
+volume_minus_text="Vol-";
+
+
 // Body
 body_size=140;
 body_size_diff=30;

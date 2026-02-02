@@ -35,18 +35,18 @@ module text_menu(){
     
     translate([text_x, text_level1_y, cylinder_radius-text_depth]){
         linear_extrude(text_depth)
-        text( "FÁCIL", size=text_size, font=text_font);
+        text(easy_text, size=text_size, font=text_font);
     }
 
     translate([text_x, text_level2_y, cylinder_radius-text_depth]){
         linear_extrude(text_depth)
-        text( "DIFÍCIL", size=text_size, font=text_font);
+        text(hard_text, size=text_size, font=text_font);
         
     }
     
     translate([text_x, text_level3_y, cylinder_radius-text_depth]){
         linear_extrude(text_depth)
-        text( "PRACTICAR", size=text_size, font=text_font);
+        text(practice_text, size=text_size, font=text_font);
         
     }
 }
@@ -57,12 +57,12 @@ module text_volume(){
     
     translate([text_volume_x, text_volume_y, cylinder_radius-text_depth]){
         linear_extrude(text_depth)
-        text( "Vol+", size=text_size, font=text_font);
+        text(volume_plus_text, size=text_size, font=text_font);
     }
 
     translate([text_volume_x, text_volume_y - button_size - button_margin, cylinder_radius-text_depth]){
         linear_extrude(text_depth)
-        text( "Vol-", size=text_size, font=text_font);
+        text(volume_minus_text, size=text_size, font=text_font);
         
     }
 }
