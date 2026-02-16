@@ -8,7 +8,7 @@
 
 #define ANIMATION_DELAY 90 // Miliseconds for animation steps
 #define ANIMATION_DURATION 1000 // How much Animation lasts
-#define DEBOUNCE_DURATION 70 // Miliseconds for button debounce
+#define DEBOUNCE_DURATION 150 // Miliseconds for button debounce
 #define RESULT_DURATION 1500 // Miliseconds to show result before next level
 
 #define START_AUDIO 18 // Track to play when starting a game

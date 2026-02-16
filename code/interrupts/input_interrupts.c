@@ -49,6 +49,7 @@ ISR(PCINT1_vect) {
     if(bit_is_clear(PINC, PC3)){
         inputs_state = 0;
         game_mode = 2;
+        animation_active = 0;
 
         inputs_state = 1;
         
