@@ -2,6 +2,10 @@
 This is a little educational game for kids (around 3-5 years old) to learn numbers and counting.
 
 ![3d design](/images/3d%20design.png)
+![body front](/images/body%20front.jpg)
+![body back](/images/body%20back.jpg)
+![lit front](/images/lit%20front.jpg)
+![lit back](/images/lit%20back.jpg)
 
 PENDING IMAGES
 
@@ -37,6 +41,7 @@ The components list is the following:
 - 16x 10K resistors
 - 2x 22pf smd capacitors
 - 1x 100nf smd capacitor
+- 1x 470uf electrolitic capacitor
 - 17x SMD Push buttons 12mm
 - 5x SMD Push buttons 6mm
 - 1x ZIF socket 28pin narrow
@@ -46,7 +51,7 @@ The components list is the following:
 - 2x Screw M2 inserts
 - 4x M2 Screws
 - 2x M2 Nuts
-- 8x Screw M3 inserts
+- 10x Screw M3 inserts
 - 8x M3 Screws
 - 1x DFPlayer mini
 - 1x Speaker 3W 4Ohm PH2.0 terminal
@@ -70,8 +75,13 @@ If you want to change the text (currently are on spanish), you can do it inside 
 
 Once you have the 3D design printed you have to put the **screw inserts**:
 - 4x M3 inserts for the lit
+![inserts m3 body](/images/inserts%20m3%20body.png)
+- 2x M3 inserts for battery lit
+![inserts m3 battery](/images/inserts%20m3%20battery.png)
 - 4x M3 inserts for the PCB
+![inserts m3 pcb](/images/inserts%20m3%20pcb.png)
 - 2x M2 inserts for the speaker
+![inserts m2 speaker](/images/inserts%20m2%20speaker.png)
 
 PENDING IMAGE
 
@@ -92,6 +102,9 @@ Image of the final result with all the components:
 
 ### Flash code to microcontroller
 The code is ready to flash with a **usbasp** programmer and an **ATMEGA168pa** microcontroller, you only have to go to the **code** folder and run `make flash` command, if you want to use other programmer or microcontroller (an ATMEGA328p for example) you have to update the **Makefile**.
+
+**NOTE:** you have to enable the fuse to use the external crystal, use the following command (for usbasp programmer and atmega168pa microcontroller):
+`avrdude -c usbasp -p m168pa -U lfuse:w:0x7F:m`
 
 Once you have flashed the microcontroller just put it inside the ZIF socket on the PCB.
 
