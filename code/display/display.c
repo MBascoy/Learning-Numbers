@@ -13,6 +13,18 @@ void show_display(){
     entradas = check_inputs();
     next_screen_row();
 
+    if(test_leds){
+        SPI_send(0x00);
+        SPI_send(0xFF);
+        SPI_send(0xFF);
+
+        SPI_send(0xFF);
+        SPI_send(0xFF);
+
+        latch();
+        return;
+    }
+
     if(game_mode == 0){
         SPI_send(~(1 << count_row));
         SPI_send(icons[4][count_row]);

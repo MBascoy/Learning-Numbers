@@ -20,4 +20,4 @@
 #define VOLUME_UP_AUDIO 24 // Track to play on failure
 #define VOLUME_DOWN_AUDIO 25 // Track to play on failure
 
-#define DEFAULT_VOLUME 20 // Default volume level (0-30)
+#define DEFAULT_VOLUME 15 // Default volume level (0-30)

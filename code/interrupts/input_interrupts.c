@@ -68,7 +68,7 @@ ISR(PCINT1_vect) {
 
 
     if(bit_is_clear(PINC, PC5)){
-        if(global_volume >= 30)
+        if(global_volume >= 25)
             return;
 
         global_volume += 5;

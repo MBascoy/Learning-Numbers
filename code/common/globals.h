@@ -23,3 +23,5 @@ uint16_t debounce_timer0_counter;
 uint8_t debounce_switch;
 
 uint8_t global_volume;
+
+uint8_t test_leds;
