@@ -53,10 +53,11 @@ The components list is the following:
 - 1x Power switch
 - 3x JST connector ph2.0
 - 1x battery holder 4x AAA
-- 2x Screw M2 inserts
+- 2x Screw M2 inserts (3mm height, 3mm OD)
 - 4x M2 Screws
 - 2x M2 Nuts
-- 10x Screw M3 inserts
+- 6x Screw M3 inserts (5mm height, 5mm OD)
+- 4x Screw M3 inserts (3mm height, 5mm OD)
 - 8x M3 Screws
 - 1x DFPlayer mini
 - 1x Speaker 3W 4Ohm PH2.0 terminal
@@ -79,13 +80,13 @@ Inside **3D design** folder you can find the 3 .stl files ready to print.
 If you want to change the text (currently are on spanish), you can do it inside **global_constants.scad** file, after that you have to re-render **learning_numbers.scad** file with **openSCAD** and export the .stl file.
 
 Once you have the 3D design printed you have to put the **screw inserts**:
-- 4x M3 inserts for the lit
+- 4x M3 inserts (5mm height, 5mm OD) for the lit
 ![inserts m3 body](/images/inserts%20m3%20body.png)
-- 2x M3 inserts for battery lit
+- 2x M3 inserts (5mm height, 5mm OD) for battery lit
 ![inserts m3 battery](/images/inserts%20m3%20battery.png)
-- 4x M3 inserts for the PCB
+- 4x M3 inserts (3mm height, 5mm OD) for the PCB
 ![inserts m3 pcb](/images/inserts%20m3%20pcb.png)
-- 2x M2 inserts for the speaker
+- 2x M2 inserts (3mm height, 3mm OD) for the speaker
 ![inserts m2 speaker](/images/inserts%20m2%20speaker.png)
 
 ### Make the PCB
