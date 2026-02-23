@@ -25,3 +25,5 @@ uint8_t debounce_switch;
 uint8_t global_volume;
 
 uint8_t test_leds;
+
+uint8_t display_name;

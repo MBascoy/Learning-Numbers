@@ -26,14 +26,25 @@ void show_display(){
     }
 
     if(game_mode == 0){
-        SPI_send(~(1 << count_row));
-        SPI_send(icons[4][count_row]);
-        SPI_send(icons[4][count_row]);
+        if(display_name){
+            SPI_send(~(1 << count_row));
+            SPI_send(icons[5][count_row]);
+            SPI_send(icons[6][count_row]);
 
-        SPI_send((uint8_t)(entradas>>8));
-        SPI_send((uint8_t)entradas);
+            SPI_send((uint8_t)(entradas>>8));
+            SPI_send((uint8_t)entradas);
+        }
+        else{
+            SPI_send(~(1 << count_row));
+            SPI_send(icons[4][count_row]);
+            SPI_send(icons[4][count_row]);
+
+            SPI_send((uint8_t)(entradas>>8));
+            SPI_send((uint8_t)entradas);
+        }
 
         latch();
+        return;
     }
     
     if(game_mode == 1 && animation_active == 0 ){
@@ -46,6 +57,7 @@ void show_display(){
         SPI_send((uint8_t)entradas);
 
         latch();
+        return;
     }
 
     if(game_mode == 2){
@@ -59,6 +71,7 @@ void show_display(){
         SPI_send((uint8_t)entradas);
 
         latch();
+        return;
     }
 
     if(animation_active == 1){
@@ -70,6 +83,7 @@ void show_display(){
         SPI_send((uint8_t)entradas);
         
         latch();
+        return;
     }
 
     if(animation_active == 2){
@@ -88,5 +102,6 @@ void show_display(){
         SPI_send((uint8_t)entradas);
         
         latch();
+        return;
     }
 }

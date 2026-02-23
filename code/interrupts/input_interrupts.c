@@ -68,7 +68,7 @@ ISR(PCINT1_vect) {
 
 
     if(bit_is_clear(PINC, PC5)){
-        if(global_volume >= 25)
+        if(global_volume >= 20)
             return;
 
         global_volume += 5;
@@ -100,6 +100,9 @@ ISR(PCINT1_vect) {
         }
         else if(game_mode == 2){
             dfplayer_play_track(active_count + 1); // +1 because tracks start at 1
+        }
+        else if(game_mode == 0){
+            display_name = !display_name;
         }
     }
 }

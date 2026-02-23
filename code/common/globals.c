@@ -18,6 +18,8 @@ uint8_t global_volume = DEFAULT_VOLUME;
 
 uint8_t test_leds = 1;
 
+uint8_t display_name = 0;
+
 volatile uint8_t *numbers[][2] = {
     {digits[10], digits[0]},
     {digits[10], digits[1]},
