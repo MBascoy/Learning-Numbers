@@ -43,6 +43,7 @@ The components list is the following:
 - 1x 8Mhz crystal oscillator
 - 33x 1K resistors
 - 16x 10K resistors
+- 1x 1Ohm resistor
 - 2x 22pf smd capacitors
 - 1x 100nf smd capacitor
 - 1x 470uf electrolitic capacitor
