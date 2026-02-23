@@ -1,13 +1,17 @@
 # Learning Numbers
 This is a little educational game for kids (around 3-5 years old) to learn numbers and counting.
 
+![example1](/images/example1.jpg)
+![example2](/images/example2.jpg)
+![example3](/images/example3.jpg)
+![example4](/images/example4.jpg)
+![example5](/images/example5.gif)
+
 ![3d design](/images/3d%20design.png)
 ![body front](/images/body%20front.jpg)
 ![body back](/images/body%20back.jpg)
 ![lit front](/images/lit%20front.jpg)
 ![lit back](/images/lit%20back.jpg)
-
-PENDING IMAGES
 
 ## How to play
 The game has 3 modes:
@@ -82,8 +86,6 @@ Once you have the 3D design printed you have to put the **screw inserts**:
 ![inserts m3 pcb](/images/inserts%20m3%20pcb.png)
 - 2x M2 inserts for the speaker
 ![inserts m2 speaker](/images/inserts%20m2%20speaker.png)
-
-PENDING IMAGE
 
 ### Make the PCB
 Inside **circuit/Learning_Numbers** folder you can find **Gerber.zip** file which has the PCB ready to be created using a your favorite provider. I've use [jlcpcb.com](https://jlcpcb.com).
